@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import { Button, Htag } from '../components';
+import { Button, Htag, Paragraph } from '../components';
 
 const Home: NextPage = (): JSX.Element => {
   return (
@@ -9,6 +9,9 @@ const Home: NextPage = (): JSX.Element => {
       <Button appearance='ghost' arrow='right'>
         button
       </Button>
+      <Paragraph size='s'>text s</Paragraph>
+      <Paragraph>text m</Paragraph>
+      <Paragraph size='l'>text l</Paragraph>
     </>
   );
 };
