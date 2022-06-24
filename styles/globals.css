@@ -20,12 +20,14 @@ a {
 }
 
 :root {
-  --black: #3B434E;
+  --black: #3b434e;
   --white: white;
-  --primary: #7653FC;
-  --red: #FC836D;
-  --green: #1DC37E;
-  --green-light: #C8F8E4;
-  --main-bg: #F5F6F8;
-  --font-family: "Noto Sans", sans-serif;
+  --gray-light: #ebebeb;
+  --primary: #7653fc;
+  --primary-hover: #6344df;
+  --red: #fc836d;
+  --green: #1dc37e;
+  --green-light: #c8f8e4;
+  --main-bg: #f5f6f8;
+  --font-family: 'Noto Sans', sans-serif;
 }

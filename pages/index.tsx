@@ -1,10 +1,12 @@
 import type { NextPage } from 'next';
-import { Htag } from '../components';
+import { Button, Htag } from '../components';
 
 const Home: NextPage = (): JSX.Element => {
   return (
     <>
       <Htag tag='h1'>text</Htag>
+      <Button appearance='primary'>button</Button>
+      <Button appearance='ghost'>button</Button>
     </>
   );
 };
