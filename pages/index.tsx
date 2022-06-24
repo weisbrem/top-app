@@ -6,7 +6,9 @@ const Home: NextPage = (): JSX.Element => {
     <>
       <Htag tag='h1'>text</Htag>
       <Button appearance='primary'>button</Button>
-      <Button appearance='ghost'>button</Button>
+      <Button appearance='ghost' arrow='right'>
+        button
+      </Button>
     </>
   );
 };
