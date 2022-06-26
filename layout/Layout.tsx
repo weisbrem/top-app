@@ -1,5 +1,4 @@
 import { FunctionComponent } from 'react';
-import cn from 'classnames';
 
 import { Header } from './Header/Header';
 import { Sidebar } from './Sidebar/Sidebar';
@@ -11,14 +10,12 @@ import styles from './Layout.module.css';
 
 const Layout = ({ children }: LayoutProps): JSX.Element => {
   return (
-    <>
-      <Header />
-      <div>
-        <Sidebar />
-        <main>{children}</main>
-      </div>
-      <Footer />
-    </>
+    <div className={styles.container}>
+      <Header className={styles.header} />
+      <Sidebar className={styles.sidebar} />
+      <main className={styles.body}>{children}</main>
+      <Footer className={styles.footer} />
+    </div>
   );
 };
 
