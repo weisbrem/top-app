@@ -12,7 +12,7 @@ interface HomeProps extends Record<string, unknown> {
   firstCategory: number;
 }
 
-const Home: NextPage<HomeProps> = ({ menu }: HomeProps): JSX.Element => {
+const Home: NextPage<HomeProps> = (): JSX.Element => {
   const [r, setR] = useState<number>(4);
 
   return (
@@ -39,9 +39,12 @@ const Home: NextPage<HomeProps> = ({ menu }: HomeProps): JSX.Element => {
 
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
   const firstCategory = 0;
-  const { data: menu } = await axios.post<MenuItem[]>(process.env.NEXT_PUBLIC_DOMAIN + '/api/top-page/find', {
-    firstCategory,
-  });
+  const { data: menu } = await axios.post<MenuItem[]>(
+    process.env.NEXT_PUBLIC_DOMAIN + '/api/top-page/find',
+    {
+      firstCategory,
+    }
+  );
 
   return {
     props: {
