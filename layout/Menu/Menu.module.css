@@ -5,8 +5,7 @@
 }
 
 .firstLevelList,
-.secondLevelList,
-.secondLevelBlock {
+.secondLevelList {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -55,6 +54,15 @@
 }
 
 .secondLevelBlock {
+  display: none;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.secondLevelBlockOpened {
+  display: block;
 }
 
 .secondLevelBlockOpened:last-child {
