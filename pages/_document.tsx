@@ -2,10 +2,10 @@ import Document, { DocumentContext, DocumentInitialProps, Html, Head, Main, Next
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
-    const initianProps = await Document.getInitialProps(ctx);
+    const initialProps = await Document.getInitialProps(ctx);
 
     return {
-      ...initianProps,
+      ...initialProps,
     };
   }
 
