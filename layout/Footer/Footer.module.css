@@ -1,14 +1,15 @@
 .footer {
   display: grid;
-  grid-template-columns: 1fr auto;
+
+  padding: 25px 30px;
+
+  color: var(--white);
+
+  background-color: var(--primary);
 
   font-size: 16px;
   line-height: 20px;
-
-  background-color: var(--primary);
-  color: var(--white);
-
-  padding: 25px 30px;
+  grid-template-columns: 1fr auto;
 }
 
 .list {
@@ -18,6 +19,7 @@
 
   margin: 0 0 0 40px;
   padding: 0;
+
   list-style: none;
 }
 
