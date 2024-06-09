@@ -5,6 +5,7 @@ import RateIcon from './rate.svg';
 import { IHhDataProps } from './HhData.props';
 
 import styles from './HhData.module.css';
+import { getPriceWithSpaces } from '../../helpers/helpers';
 
 export const HhData = ({ count, juniorSalary, middleSalary, seniorSalary }: IHhDataProps): JSX.Element => {
   return (
@@ -16,7 +17,7 @@ export const HhData = ({ count, juniorSalary, middleSalary, seniorSalary }: IHhD
       <Card color='white' className={styles.salary}>
         <div>
           <p className={styles.title}>Начальный</p>
-          <span className={styles.salaryValue}>{juniorSalary}</span>
+          <span className={styles.salaryValue}>{getPriceWithSpaces(juniorSalary)}</span>
           <span className={styles.rate}>
             <RateIcon className={styles.filled} />
             <RateIcon />
@@ -25,7 +26,7 @@ export const HhData = ({ count, juniorSalary, middleSalary, seniorSalary }: IHhD
         </div>
         <div>
           <p className={styles.title}>Средний</p>
-          <span className={styles.salaryValue}>{middleSalary}</span>
+          <span className={styles.salaryValue}>{getPriceWithSpaces(middleSalary)}</span>
           <span className={styles.rate}>
             <RateIcon className={styles.filled} />
             <RateIcon className={styles.filled} />
@@ -34,7 +35,7 @@ export const HhData = ({ count, juniorSalary, middleSalary, seniorSalary }: IHhD
         </div>
         <div>
           <p className={styles.title}>Профессионал</p>
-          <span className={styles.salaryValue}>{seniorSalary}</span>
+          <span className={styles.salaryValue}>{getPriceWithSpaces(seniorSalary)}</span>
           <span className={styles.rate}>
             <RateIcon className={styles.filled} />
             <RateIcon className={styles.filled} />
