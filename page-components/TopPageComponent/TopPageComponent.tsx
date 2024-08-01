@@ -1,6 +1,6 @@
 import React from 'react';
 import { ITopPageComponentProps } from './TopPageComponent.props';
-import { Advantages, HhData, Htag, Ptag, Tag } from '../../components';
+import { Advantages, HhData, Htag, Tag } from '../../components';
 
 import styles from './TopPageComponent.module.css';
 import { TopLevelCategory } from '../../interfaces/page.interface';
@@ -35,7 +35,7 @@ export function TopPageComponent({ page, products, firstCategory }: ITopPageComp
           <Advantages advantages={page.advantages} />
         </>
       )}
-      {page.seoText && <Ptag>{page.seoText}</Ptag>}
+      {page.seoText && <div className={styles.seoText} dangerouslySetInnerHTML={{ __html: page.seoText }} />}
       <Htag tag='h2'>Получаемые навыки</Htag>
       {page.tags.map((t) => (
         <Tag key={t} color='primary'>
