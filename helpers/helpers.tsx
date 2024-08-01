@@ -12,3 +12,10 @@ export const firstLevelMenu: FirstLevelMenuItem[] = [
   { route: 'books', name: 'Книги', icon: <BooksIcon />, id: TopLevelCategory.Books },
   { route: 'products', name: 'Товары', icon: <ProductsIcon />, id: TopLevelCategory.Products },
 ];
+
+export const getPriceWithSpaces = (price: number): string =>
+  new Intl.NumberFormat('ru-RU', {
+    style: 'currency',
+    currency: 'RUB',
+    minimumFractionDigits: 0,
+  }).format(price);
